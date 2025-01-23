@@ -23,6 +23,10 @@ class Produto(models.Model):
 
     def __str__(self):
         return self.titulo
+
+    def display_preco(self):
+        return self.preco/100
      
     class Meta:
+        ordering = ('-criado_em',)
         verbose_name_plural = 'Produtos'

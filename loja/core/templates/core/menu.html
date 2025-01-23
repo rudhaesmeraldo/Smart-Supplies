@@ -1,0 +1,7 @@
+{% for Categoria in categorias %}
+
+<a href="{% url 'detalhes_categoria' categoria.slug %}" class="text-2xl text-white">{{categorias.titulo}}</a>
+
+{% endfor %}
+
+<a href="{% url 'sobre' %}" class="text-2xl text-white">Sobre</a>
