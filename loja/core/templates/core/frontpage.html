@@ -5,6 +5,16 @@ Smart Supplies
 {% endblock  %}
 
 {% block content %}
-PAGE HOME
+
+    <div class="flex flex-wrap">
+        {% for produto in produtos %} 
+            <div class="produto w-1/3 p-2"> 
+                <div class="p-4 bg-gray-50">
+                    {{produto.titulo}}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+        
 {% endblock  %}
 
