@@ -13,7 +13,7 @@ class Categoria(models.Model):
 
 class Produto(models.Model):
     usuario = models.ForeignKey(User, related_name='produto', on_delete=models.CASCADE)
-    categoria = models.ForeignKey(Categoria, related_name='produto', on_delete=models.CASCADE)
+    categoria = models.ForeignKey(Categoria, related_name='produtos', on_delete=models.CASCADE)
     titulo = models.CharField(max_length=50)
     slug = models.SlugField(max_length=50)
     descricao = models.TextField(blank=True)
