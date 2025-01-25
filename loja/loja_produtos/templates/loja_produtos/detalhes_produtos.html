@@ -6,7 +6,10 @@
 
 {% block content %} 
 <h1 class="text-2xl">{{ produto.titulo }}</h1>
-<p class="text-2xl text-green-600">R${{ produto.display_preco }}</p>
+<p class="text-2xl text-green-600">
+    R${{ produto.display_preco }} - {% firstof produto.user.get_full_name produto.user.username %}
+
+</p>
 
 {% if produto.descricao %}
 <p class="mt-4">
