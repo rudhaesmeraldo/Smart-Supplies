@@ -18,6 +18,7 @@ class Produto(models.Model):
     slug = models.SlugField(max_length=50)
     descricao = models.TextField(blank=True)
     preco = models.IntegerField()
+    imagem = models.ImageField(upload_to='uploads/produto_imagem/', blank=True, null=True)
     criado_em = models.DateTimeField(auto_now_add=True)
     atualizado_em = models.DateTimeField(auto_now=True)
 

@@ -14,6 +14,11 @@
             <div class="produto w-1/3 p-2"> 
                 <div class="p-4 bg-gray-50">
                     <a href="{% url 'detalhes_produtos' produto.categoria.slug produto.slug %}">
+                        {% if produto.imagem %}
+                        <div class="imagem" mb-4>
+                            <img src="{{ produto.imagem.url }}" height="500" width="600" alt="Foto Produto {{ produto.imagem.url }} ">
+                        </div>
+                        {% endif %}
                         <h2 class="text-xl">{{ produto.titulo }}</h2>
                         <p class="text-xl text-green-600">R${{ produto.display_preco }}</p>
                     </a>
