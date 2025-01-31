@@ -13,7 +13,7 @@ def cadastrar(request):
     if request.method=='POST':
         formulario = UserCreationForm(request.POST)
         if formulario.is_valid():
-            usuario = form.save()
+            usuario = formulario.save()
 
             login(request, usuario)
             perfil_usuario = Perfil_usuario.objects.create(usuario=usuario)

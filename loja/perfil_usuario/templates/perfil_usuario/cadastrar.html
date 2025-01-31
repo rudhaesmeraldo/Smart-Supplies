@@ -6,9 +6,9 @@
 
 <h1 class="text-2xl">PAGE CADASTRO</h1>
 
-<form method="POST" accept=".">
+<form method="post" action=".">
     {% csrf_token %}
-    {{ form.as_p }}
+    {{ formulario.as_p }}
     <button class="py-4 px-8 bg-green-500">CADASTRAR </button>
 </form>
 
