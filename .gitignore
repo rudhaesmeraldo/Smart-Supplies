@@ -1,0 +1,34 @@
+# Ambiente virtual
+venv/
+.env
+
+# Arquivos do Python
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+*.sqlite3
+
+# Arquivos do Django
+db.sqlite3
+media/
+staticfiles/
+*.log
+
+# VSCode
+.vscode/
+
+# PyCharm
+.idea/
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos de migração (opcional)
+*/migrations/__pycache__/
+*/migrations/*.pyc
+
+# Cache do pip
+pip-wheel-metadata/
+*.egg-info/
